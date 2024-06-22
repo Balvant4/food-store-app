@@ -5,10 +5,13 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import Footer from "./components/Footer";
+import Navbar from "./components/Header/Navbar";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -16,6 +19,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
